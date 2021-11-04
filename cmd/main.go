@@ -12,18 +12,18 @@ func main() {
 	fmt.Println("Simple Shell")
 	fmt.Println("---------------------")
 
-	for {
-		fmt.Print("-> ")
-		text, _ := reader.ReadString('\n')
-		// convert CRLF to LF
-		text = strings.Replace(text, "\n", "", -1)
+	fmt.Print("-> ")
+	text, _ := reader.ReadString('\n')
+	// convert CRLF to LF
+	text = strings.Replace(text, "\n", "", -1)
 
-		fmt.Println(text)
+	fmt.Println(text)
 
-		if strings.Compare("hi", text) == 0 {
-			fmt.Println("hello, Yourself")
-		}
-
+	if strings.Compare("upscale", text) == 0 {
+		fmt.Println("So you want to upscale? That's fine by me :D")
 	}
 
+	if strings.Compare("downscale", text) == 0 {
+		fmt.Println("Ok, I'll kill one of my agents D:")
+	}
 }
